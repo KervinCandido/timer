@@ -1,0 +1,72 @@
+.timer {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.timer .before, .timer .after {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 50%;
+}
+
+.timer .before {
+    border-top: 3px solid #e67e22;
+    transform: rotate(120deg);
+    z-index: 0;
+    transition: linear;
+}
+
+.timer .after {
+    border-bottom: 3px solid #f1c40f;
+    transform: rotate(120deg);
+    z-index: 1;
+}
+
+.rotate-border {
+    animation: rotate-border 4s linear infinite;
+}
+
+@keyframes rotate-border {
+    to {
+        transform: rotate(480deg);
+    }
+}
+
+
+.timer .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.timer .content .group-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.font-big-size {
+    font-size: 3rem;
+}
+
+.font-midium-size {
+    font-size: 1.2rem;
+}
+
+.cursor-point {
+    cursor: pointer;
+}
+
+.display-none {
+    display: none;
+}

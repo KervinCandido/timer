@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="timer">
+        <div class="before"></div>
+        <div class="content">
+            <span id="timer" class="font-big-size padding-1-5">00:00:00</span>
+            <div class="group-control">
+                <span 
+                    id="start" 
+                    class="cursor-point font-midium-size"
+                    onclick="debounce(timerController.start()).bind(timerController)"
+                >Start</span>
+                <span 
+                    id="stop" 
+                    class="display-none cursor-point font-midium-size"
+                    onclick="debounce(timerController.stop()).bind(timerController)"
+                >Stop</span>
+                <span 
+                    id="resume" 
+                    class="display-none cursor-point font-midium-size"
+                    onclick="debounce(timerController.resume()).bind(timerController)"
+                    >Resume</span>
+                <span 
+                    id="reset" 
+                    class="cursor-point font-midium-size"
+                    onclick="debounce(timerController.reset()).bind(timerController)"
+                    >Reset</span>
+            </div>
+        </div>
+        <div class="after"></div>
+    </div>
+
+    <script src="./js/app/modelo/timer.js"></script>
+    <script src="./js/app/util/debounce.js"></script>
+    <script src="./js/app/controller/timer_controller.js"></script>
+    <script>
+        const timerController = new TimerController();
+    </script>
+</body>
+</html>
